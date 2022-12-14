@@ -13,3 +13,5 @@ function createIdCard(bioCard){
 /* map it */
 
 }
+const compile = toDo.map(createIdCard).join("");
+root.innerHTML = compile;
