@@ -1,5 +1,5 @@
 const root = document.querySelector('#root');
-
+// ln 3 name should be const resp//
 const toDoList = await fetch("https://jsonplaceholder.typicode.com/todos");
 
 const toDo = await toDoList.json();
@@ -22,4 +22,8 @@ function createIdCard(bioCard){
 
 }
 const compile = toDo.map(createIdCard).join("");
-root.innerHTML = compile;
+root.innerHTML = `
+
+<label for="search" class="sr-only">Search</label>
+<input type="search" id="search" placeholder="Searching? Find it here!" />
+`;
